@@ -1,0 +1,15 @@
+{
+  "name": "timx-guruguru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server -c config/lite-server.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.0"
+  },
+  "dependencies": {},
+  "description": ""
+}

@@ -1,0 +1,13 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <md-card ng-repeat="item in restaurant">
+        <img ng-src="{{item.image}}" class="md-card-image">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{item.name}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <p>{{item.description}}</p>
+        </md-card-content>
+    </md-card>
+</md-content>
