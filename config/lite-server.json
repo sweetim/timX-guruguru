@@ -1,7 +1,0 @@
-{
-    "port": 3030,
-    "files": ["./src/**/*.{html,css,js}"],
-    "server": {
-        "baseDir": "./src"
-    }
-}

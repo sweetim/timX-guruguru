@@ -9,7 +9,7 @@ angular.module('guruguru.RestaurantService', [])
                 $http.get(RESTAURANT_SERVICE_URL + '/api/restaurant')
                     .success(function(res) {
                         var restaurant = res.restaurants.map(function(item) {
-                            var imageUrl = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150';
+                            var imageUrl = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=200';
                             if (item.images.length > 0) {
                                 var imageIndex = Math.floor(Math.random() * item.images.length);
                                 var imageSrc = item.images[imageIndex].url;
