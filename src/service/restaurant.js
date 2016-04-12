@@ -6,7 +6,7 @@ export default class RestaurantService {
         this.$q = $q;
     }
 
-    getRestaurant() {
+    getRestaurants() {
         let defer = this.$q.defer();
 
         this.$http.get('http://localhost:3000/api/restaurant')
@@ -20,6 +20,7 @@ export default class RestaurantService {
                     }
 
                     return {
+                        id: item._id,
                         name: item.name,
                         description: item.description,
                         image: imageUrl,
@@ -30,7 +31,21 @@ export default class RestaurantService {
                     }
                 });
 
-                defer.resolve(res.restaurants)
+                defer.resolve(restaurant)
+            })
+            .error((status) => {
+                defer.reject(status)
+            });
+
+        return defer.promise;
+    }
+
+    getRestaurant(id) {
+        let defer = this.$q.defer();
+
+        this.$http.get('http://localhost:3000/api/restaurant/' + id)
+            .success((res) => {
+                defer.resolve(res);
             })
             .error((status) => {
                 defer.reject(status)

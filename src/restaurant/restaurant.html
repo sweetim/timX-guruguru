@@ -1,6 +1,6 @@
 <md-content class="md-padding" layout-xs="column" layout="row">
-    <md-card ng-repeat="item in gg.restaurant">
-        <img ng-src="{{item.image}}" class="md-card-image">
+    <md-card ng-repeat="item in gg.restaurant" ng-click="gg.selectRestaurant(item)">
+        <!-- <img ng-src="{{item.image}}" class="md-card-image"> -->
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">{{item.name}}</span>

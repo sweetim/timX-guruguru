@@ -1,0 +1,12 @@
+<h2>{{gg.name}}</h2>
+<p>
+    {{gg.description}}
+</p>
+<p>
+    {{gg.coordinates}}
+</p>
+<ul>
+    <li ng-repeat="item in gg.images">
+        <img ng-src="{{item.url}}" alt="" />
+    </li>
+</ul>
